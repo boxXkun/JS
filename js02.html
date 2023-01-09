@@ -1,0 +1,49 @@
+<script>
+  //함수 선언문
+  function func1(value) {
+    return value;
+  }
+  function func2() {
+    const 조건 = true;
+    if (조건) {
+      return;
+    }
+    console.log("출력");
+  }
+  // 함수 표현식 (익명 함수)
+  var func3 = function (value) {
+    return value;
+  };
+
+  //람다 (화살표 함수)
+  //한줄의 경우 return 불필요
+  var func4 = (value) => value;
+  var func5 = (value) => {
+    return value;
+  };
+
+  console.log(func1);
+
+  func1(1);
+  console.log(func1(1));
+  console.log(1);
+  console.log(func2());
+
+  // 배열;
+  var array1 = [1, 2, 3, 4];
+  var array2 = ["가", 1, null, true];
+  var array2 = [
+    [1, 2],
+    [3, 4],
+  ];
+
+  //rorcp:
+  var obj1 = {
+    key: "value",
+    func: (value) => value,
+    array: [1, 2, 3, 4],
+    obj: {
+      key: "value",
+    },
+  };
+</script>

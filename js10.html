@@ -1,0 +1,48 @@
+<script>
+  //break.continue
+  //while , for 안에서 break 선언시 반복문 종료.
+  //
+  const breakFunc = () => {
+    let count = 0;
+    while (count < 100) {
+      console.log(`${count} breaktest`);
+
+      if (count > 10) {
+        break;
+      }
+      count = count + 1;
+    }
+  };
+  // breakFunc();
+  //return 함수 강제종료
+  // 계산이 완료되서 더이상 함수 내의 코드를 실행할 필요가 없을 때
+  const returnFunc = () => {
+    let count = 0;
+    while (count < 100) {
+      console.log(`${count} returntest`);
+      return;
+      if (count > 10) {
+        break;
+      }
+      count = count + 1;
+    }
+  };
+  // returnFunc();
+  // continue 다음 반복으로 넘어간다
+  // array.filter 필터링시
+  // 조건이 홀수인 것만 필터링 시 짝수일 때 continue, 홀수는 push
+  const continueFunc = () => {
+    let count = 0;
+    while (count < 100) {
+      console.log(`${count} continuetest`);
+
+      if (count == 98) {
+        continue;
+      }
+      count = count + 1;
+    }
+  };
+  continueFunc();
+
+  //return
+</script>

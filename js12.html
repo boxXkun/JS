@@ -1,0 +1,45 @@
+<script>
+  const noAsyncFunc = () => {
+    const pro1 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("pro1 완료");
+      }, 2000);
+    });
+    const pro2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("pro2 완료");
+      }, 1000);
+    });
+    pro1.then((response) => {
+      //console.log(response);
+    });
+    pro2.then((response) => {
+      //console.log(response);
+    });
+  };
+  //noAsyncFunc();
+  const asyncFunc = async () => {
+    const pro1 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("pro1 완료");
+      }, 2000);
+    });
+    const pro2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("pro2 완료");
+      }, 1000);
+    });
+    pro1.then((response) => {
+      //console.log(response);
+    });
+    pro2.then((response) => {
+      //console.log(response);
+    });
+    const res1 = await pro1;
+    console.log(res1);
+    const res2 = await pro2;
+    console.log(res2);
+  };
+  //async는 프로미스 리턴함 ㅅㅅ
+  asyncFunc();
+</script>

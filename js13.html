@@ -1,0 +1,32 @@
+<script>
+  //클로저 closure 함수를 객체처럼 사용
+  // var, let ,const
+  // -> 스코프가 함수를 넘지 못함
+  //   class Count {
+  //     constructor() {
+  //       this.count = 0;
+  //     }
+  //     increase() {
+  //       this.count = this.count + 1;
+  //       return this.count;
+  //     }
+  //   }
+  //   const count = new Count();
+  //   console.log(count.increase());
+  //   console.log(count.increase());
+  //   console.log(count.increase());
+
+  const makeCounter = () => {
+    let count = 0;
+    return () => {
+      //함수 리턴 부모함수 변수를 가질시
+      //부모 함수의 변수가 어디선가 살아남음
+      count = count + 1;
+      return count;
+    };
+  };
+  const counter = makeCounter();
+  console.log(counter());
+  console.log(counter());
+  console.log(counter());
+</script>

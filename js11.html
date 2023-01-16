@@ -1,0 +1,41 @@
+<script>
+  //   //setTimeout 타이머
+  //   console.log(Date.now());
+  //   setTimeout(() => {
+  //     console.log("안녕");
+  //     console.log(Date.now());
+  //   }, 2000);
+  //   const myInter = setInterval(() => {
+  //     console.log(Date.now);
+  //   }, 2000);
+  //   setTimeout(() => {
+  //     clearInterval(myInter);
+  //   }, 10000);
+
+  //promise 문
+  // 값(열쇠)이 들어와야 열리는 금고
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("택배도착");
+      //reject("택배분실");
+    }, 2000);
+  });
+
+  promise
+    .then((response) => {
+      console.log(response);
+      return "택배개봉";
+    })
+
+    .catch((error) => {
+      console.log(error);
+    })
+    .finally(() => {
+      //성공하든 실패하든 작동
+      console.log("finally");
+    })
+    .then((response) => {
+      console.log(response);
+    });
+</script>
+//
